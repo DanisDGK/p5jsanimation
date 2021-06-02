@@ -12,7 +12,7 @@ function draw() {
   background(bgRedBoxInput.value(), bgGreenBoxInput.value(), bgBlueBoxInput.value(), 255);
   translate(width / 2, height / 2);
   noFill();
-  strokeWeight(8);
+  strokeWeight(strokeWeightSlider.value());
   
   for (var n = 0; n < elementSlider.value(); n++) {
     
@@ -45,7 +45,8 @@ function animationSettings() {
   maxRadP = createP('Maximum radius').position(220, 810);
   rotSpeedSlider = createSlider(0.1, 1, 0.1, 0.05).position(420, 850);
   rotSpeedP = createP('Rotation speed').position(420, 810);
-
+  strokeWeightSlider = createSlider(1, 25, 8, 1).position(710, 490);
+  strokeWeightP = createP('Stroke weight').position(710, 450);
   
 }
 
